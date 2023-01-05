@@ -1,0 +1,53 @@
+/**Swim_Store:
+Speedos (120)
+TYR (120)
+Kick Boards (50)
+Paddles (100)
+Pull Buoy (50)
+Towels (25)
+Flippers (100)
+Goggles (50)
+Parkas (20)
+Backpack (15)
+Crocs (50)
+Swim Caps (25)
+Water Bottles (20)
+Snorkel (15)
+Equipment Bag (10)
+Resistance Bands (20)
+Dumbbells (20)
+Shampoo (10)
+Conditioner (10)
+**/
+
+CREATE TABLE swim_store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, statistic INTEGER);
+
+INSERT INTO swim_store VALUES (1, "Speedos", 120, 75, 10);
+INSERT INTO swim_store VALUES (2, "TYR", 120, 50, 20);
+INSERT INTO swim_store VALUES (3, "Kick Boards", 50, 30, 80);
+INSERT INTO swim_store VALUES (4, "Paddles", 100, 25, 40);
+INSERT INTO swim_store VALUES (5, "Pull Buoy", 50, 20, 40);
+INSERT INTO swim_store VALUES (6, "Towels", 25, 50, 5);
+INSERT INTO swim_store VALUES (7, "Flippers", 100, 60, 35);
+INSERT INTO swim_store VALUES (8, "Goggles", 50, 55, 30);
+INSERT INTO swim_store VALUES (9, "Parkas", 20, 120, 20);
+INSERT INTO swim_store VALUES (10, "Backpack", 15, 80, 60);
+INSERT INTO swim_store VALUES (11, "Crocs", 50, 40, 25);
+INSERT INTO swim_store VALUES (12, "Swim Caps", 25, 10, 90);
+INSERT INTO swim_store VALUES (13, "Water Bottles", 20, 25, 75);
+INSERT INTO swim_store VALUES (14, "SNORKEL", 15, 45, 5);
+INSERT INTO swim_store VALUES (15, "Equipment Bag", 10, 30, 20);
+INSERT INTO swim_store VALUES (16, "Resistance Bands", 20, 40, 30);
+INSERT INTO swim_store VALUES (17, "Dumbbells", 20, 25, 15);
+INSERT INTO swim_store VALUES (18, "Shampoo", 10, 80, 5);
+INSERT INTO swim_store VALUES (19, "Conditoner", 10, 80, 5);
+
+--list of items sold in the store which includes the quanitity, price, and amount sold of each item.
+SELECT * FROM swim_store;
+
+--display the database ordered by price.
+SELECT * FROM swim_store ORDER BY price;
+
+--display the database ordered by quantity.
+SELECT quantity, SUM(quantity) FROM swim_store GROUP BY quantity
+
